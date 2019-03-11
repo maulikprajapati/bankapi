@@ -6,6 +6,7 @@
   "scripts": {
     "build": "babel src -d dist",
     "start": "babel src -d dist && npm run build && npm run copyEnv && nodemon dist/index.js",
+    "start:dev": "npm run build && npm run copyEnv && nodemon dist/index.js",
     "copyEnv": "copyfiles ./src/modules/shared/environments/.*.env dist/modules/shared/environments --flat",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

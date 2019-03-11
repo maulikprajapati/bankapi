@@ -4,6 +4,12 @@ import { getCustomerById } from '../../validations/customer.validations';
 const validate = require('express-validation');
 
 const customer = (router) => {
+    router.get(
+        '/health',
+        (req, res, next) => {
+            return res.send('alive');
+        }
+    );
 
     router.post(
         '/createcustomer',
